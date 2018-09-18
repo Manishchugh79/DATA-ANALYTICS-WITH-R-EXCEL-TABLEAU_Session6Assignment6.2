@@ -1,0 +1,73 @@
+﻿Session 6 – Visualization
+      and Plotting
+     Assignment - 2
+Contents
+
+  Introduction ..................................................................................................................................................... 2
+
+  Objective .......................................................................................................................................................... 2
+
+  Prerequisites .................................................................................................................................................... 2
+
+  Associated Data Files ....................................................................................................................................... 2
+
+  Problem Statement ......................................................................................................................................... 2
+
+  Expected Output .............................................................................................................................................. 2
+
+
+
+
+   Copyrights© 2017, AcadGild. All Rights Reserved                                                                                                                1
+   Introduction
+This assignment will help you to understand the key concepts learnt in this session.
+
+
+   Objective
+This assignment will test your skills on Visualization and Plotting operations in R.
+
+
+   Prerequisites
+Not Applicable
+
+
+   Associated Data Files
+Not Applicable
+
+
+   Problem Statement
+1. Import the Titanic Dataset from the link Titanic Data Set.
+Perform the following:
+
+a. Is there any difference in fares by different class of tickets?
+Note - Show a boxplot displaying the distribution of fares by class
+
+Answer:
+> cor(titanic$fare, titanic$pclass, use="complete.obs")
+[1] -0.5586287
+
+> aggregate(fare~pclass,titanic,median)
+  pclass    fare
+1      1 60.0000
+2      2 15.0458
+3      3  8.0500
+
+boxplot(fare~pclass, data=t1, xlab="fare", ylab="pclass", main="Boxplot Displaying The Distribution Of Fares By Class", col="Blue")
+
+Boxplot saved as .png file in GitHub link: https://github.com/Manishchugh79/DATA-ANALYTICS-WITH-R-EXCEL-TABLEAU_Session6Assignment6.2
+> summary(titanic$fare)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+  0.000   7.896  14.454  33.295  31.275 512.329       1 
+
+b. Is there any association with Passenger class and gender?
+Note – Show a stacked bar chart
+
+
+   Expected Output
+Not Applicable
+
+
+
+
+  Copyrights© 2017, AcadGild. All Rights Reserved                                      2
+
