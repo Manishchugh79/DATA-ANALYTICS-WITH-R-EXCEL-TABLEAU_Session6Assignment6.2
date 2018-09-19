@@ -52,7 +52,7 @@ Answer:
 2      2 15.0458
 3      3  8.0500
 
-boxplot(fare~pclass, data=t1, xlab="fare", ylab="pclass", main="Boxplot Displaying The Distribution Of Fares By Class", col="Blue")
+boxplot(fare~pclass, data=titanic, xlab="fare", ylab="pclass", main="Boxplot Displaying The Distribution Of Fares By Class", col="Blue")
 
 Boxplot saved as .png file in GitHub link: https://github.com/Manishchugh79/DATA-ANALYTICS-WITH-R-EXCEL-TABLEAU_Session6Assignment6.2
 > summary(titanic$fare)
