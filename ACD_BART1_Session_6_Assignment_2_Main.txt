@@ -62,6 +62,46 @@ Boxplot saved as .png file in GitHub link: https://github.com/Manishchugh79/DATA
 b. Is there any association with Passenger class and gender?
 Note – Show a stacked bar chart
 
+Answer:
+Yes, there can be an association established between pclass and sex
+
+> tapply(titanic$pclass, titanic$sex, shapiro.test)
+$`female`
+
+	Shapiro-Wilk normality test
+
+data:  X[[i]]
+W = 0.75037, p-value < 2.2e-16
+
+
+$male
+
+	Shapiro-Wilk normality test
+
+data:  X[[i]]
+W = 0.70214, p-value < 2.2e-16
+
+
+> bartlett.test(titanic$pclass~titanic$sex)
+
+	Bartlett test of homogeneity of variances
+
+data:  titanic$pclass by titanic$sex
+Bartlett's K-squared = 2.5363, df = 1, p-value = 0.1113
+
+> 
+
+> oneway.test(titanic$pclass ~ titanic$sex)
+
+	One-way analysis of means (not assuming equal variances)
+
+data:  titanic$pclass and titanic$sex
+F = 19.863, num df = 1.00, denom df = 908.08, p-value = 9.358e-06
+
+plot(titanic$sex, titanic$pclass, xlab="Gender", ylab="Passender Class", col="red", main="Association with Passenger Class and Gender")
+
+Stacked BarChart exported and saved in GitHub link: https://github.com/Manishchugh79/DATA-ANALYTICS-WITH-R-EXCEL-TABLEAU_Session6Assignment6.2
+   
 
    Expected Output
 Not Applicable
